@@ -1,4 +1,6 @@
+![Campus Network Design Topology](topology.jpg)
 📶 Campus Network Design
+
   its is a network design made for a campus with different components with the intention of clearly showing how different components are configured
   
 ⚙️ Components used:-
