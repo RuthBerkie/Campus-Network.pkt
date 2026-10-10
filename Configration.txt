@@ -1,0 +1,839 @@
+SECOND LAYER SWITCH
+
+enable 
+config t
+interface range fa0/1-24
+switchport mode access
+switchport access vlan 10
+do write
+
+hostname ADMIN-SW
+banner motd #
+________________________________________
+
+           Admin's switch
+________________________________________#
+
+line console 0
+password cisco
+login
+exit
+
+enable password cisco
+service password-encryption  
+do write
+
+interface range fa0/1-24
+switchport mode access
+switchport access vlan 10
+switchport port-security maximum 2   
+switchport port-security mac-address sticky
+switchport port-security violation shutdown
+exit
+do write
+-------------------------------------------
+
+
+
+
+enable 
+config t
+interface fa0/1-24
+switchport mode access
+switchport access vlan 20
+
+hostname HR-SW
+banner motd #
+________________________________________
+
+         Human Resource's switch
+________________________________________#
+
+line console 0
+password cisco
+login
+exit
+
+enable password cisco
+service password-encryption  
+do write
+
+interface range fa0/1-24
+switchport mode access
+switchport access vlan 20
+switchport port-security maximum 2   
+switchport port-security mac-address sticky
+switchport port-security violation shutdown
+exit
+do write
+----------------------------------------------
+
+
+
+
+
+
+enable 
+config t
+interface fa0/1-24
+switchport mode access
+switchport access vlan 30
+
+hostname FIN-SW
+banner motd #
+________________________________________
+
+           Finance's switch
+________________________________________#
+
+line console 0
+password cisco
+login
+exit
+
+enable password cisco
+service password-encryption  
+do write
+
+interface range fa0/1-24
+switchport mode access
+switchport access vlan 30
+switchport port-security maximum 2   
+switchport port-security mac-address sticky
+switchport port-security violation shutdown
+exit
+do write
+-----------------------------------------------
+
+
+
+
+
+enable 
+config t
+interface fa0/1-24
+switchport mode access
+switchport access vlan 40
+
+hostname Busi-SW
+banner motd #
+________________________________________
+
+           Business's switch
+________________________________________#
+
+line console 0
+password cisco
+login
+exit
+
+enable password cisco
+service password-encryption  
+do write
+
+interface range fa0/1-24
+switchport mode access
+switchport access vlan 40
+switchport port-security maximum 2   
+switchport port-security mac-address sticky
+switchport port-security violation shutdown
+exit
+do write
+-----------------------------------------------
+
+
+
+
+
+enable 
+config t
+interface fa0/1-24
+switchport mode access
+switchport access vlan 50
+
+hostname E&C-SW
+banner motd #
+________________________________________
+
+  Engineering and computing's switch
+________________________________________#
+
+line console 0
+password cisco
+login
+exit
+
+enable password cisco
+service password-encryption  
+do write
+
+interface range fa0/1-24
+switchport mode access
+switchport access vlan 50
+switchport port-security maximum 2   
+switchport port-security mac-address sticky
+switchport port-security violation shutdown
+exit
+do write
+-----------------------------------------------
+
+
+
+
+enable 
+config t
+interface fa0/1-24
+switchport mode access
+switchport access vlan 60
+
+hostname A&D-SW
+banner motd #
+________________________________________
+
+       Arts and design's switch
+________________________________________#
+
+line console 0
+password cisco
+login
+exit
+
+enable password cisco
+service password-encryption  
+do write
+
+interface range fa0/1-24
+switchport mode access
+switchport access vlan 60
+switchport port-security maximum 2   
+switchport port-security mac-address sticky
+switchport port-security violation shutdown
+exit
+do write
+-----------------------------------------------
+
+
+
+
+
+
+enable 
+config t
+interface fa0/1-24
+switchport mode access
+switchport access vlan 70
+
+hostname StudLab-SW
+banner motd #
+________________________________________
+
+       Student Lab's switch
+________________________________________#
+
+line console 0
+password cisco
+login
+exit
+
+enable password cisco
+service password-encryption  
+do write
+
+interface range fa0/1-24
+switchport mode access
+switchport access vlan 70
+switchport port-security maximum 2   
+switchport port-security mac-address sticky
+switchport port-security violation shutdown
+exit
+do write
+---------------------------------------------------
+
+
+
+
+enable 
+config t
+interface fa0/1-24
+switchport mode access
+switchport access vlan 80
+
+hostname IT Dep-SW
+banner motd #
+________________________________________
+
+       IT Department's switch
+________________________________________#
+
+line console 0
+password cisco
+login
+exit
+
+enable password cisco
+service password-encryption  
+do write
+
+interface range fa0/1-24
+switchport mode access
+switchport access vlan 80
+switchport port-security maximum 2   
+switchport port-security mac-address sticky
+switchport port-security violation shutdown
+exit
+do write
+-------------------------------------------------------
+
+
+
+
+
+enable 
+config t
+interface fa0/1-24
+switchport mode access
+switchport access vlan 90
+
+hostname Stuff-SW
+banner motd #
+________________________________________
+
+            Stuff's switch
+________________________________________#
+
+line console 0
+password cisco
+login
+exit
+
+enable password cisco
+service password-encryption  
+do write
+
+interface range fa0/1-24
+switchport mode access
+switchport access vlan 90
+switchport port-security maximum 2   
+switchport port-security mac-address sticky
+switchport port-security violation shutdown
+exit
+do write
+--------------------------------------------------
+
+
+
+
+
+enable 
+config t
+interface fa0/1-24
+switchport mode access
+switchport access vlan 100
+
+hostname BStudLab-SW
+banner motd #
+________________________________________
+
+     Branch Student Lab's switch
+________________________________________#
+
+line console 0
+password cisco
+login
+exit
+
+enable password cisco
+service password-encryption  
+do write
+
+interface range fa0/1-24
+switchport mode access
+switchport access vlan 90
+switchport port-security maximum 2   
+switchport port-security mac-address sticky
+switchport port-security violation shutdown
+exit
+
+interface range fa0/1-24
+switchport mode access
+switchport access vlan 100
+switchport port-security maximum 2   
+switchport port-security mac-address sticky
+switchport port-security violation shutdown
+exit
+
+do write
+-----------------------------------------------
+_______________________
+THRID LAYER SWITCH
+_______________________
+
+enable 
+config t
+interface  gig1/0/2
+switchport mode access
+switchport access vlan 10
+switchport port-security maximum 2   
+switchport port-security mac-address sticky
+switchport port-security violation shutdown
+exit
+
+interface  gig1/0/3
+switchport mode access
+switchport access vlan 20
+switchport port-security maximum 2   
+switchport port-security mac-address sticky
+switchport port-security violation shutdown
+exit
+
+interface  gig1/0/4
+switchport mode access
+switchport access vlan 30
+switchport port-security maximum 2   
+switchport port-security mac-address sticky
+switchport port-security violation shutdown
+exit
+
+interface  gig1/0/5
+switchport mode access
+switchport access vlan 40
+switchport port-security maximum 2   
+switchport port-security mac-address sticky
+switchport port-security violation shutdown
+exit
+
+interface  gig1/0/6
+switchport mode access
+switchport access vlan 50
+switchport port-security maximum 2   
+switchport port-security mac-address sticky
+switchport port-security violation shutdown
+exit
+
+interface  gig1/0/7
+switchport mode access
+switchport access vlan 60
+switchport port-security maximum 2   
+switchport port-security mac-address sticky
+switchport port-security violation shutdown
+exit
+
+interface  gig1/0/8
+switchport mode access
+switchport access vlan 70
+switchport port-security maximum 2   
+switchport port-security mac-address sticky
+switchport port-security violation shutdown
+exit
+
+interface  gig1/0/9
+switchport mode access
+switchport access vlan 80
+switchport port-security maximum 2   
+switchport port-security mac-address sticky
+switchport port-security violation shutdown
+exit
+do write
+
+hostname L3Main-SW
+banner motd #
+___________________________________________
+
+           Layer 3 Main Switch
+___________________________________________#
+
+line console 0
+password cisco
+login
+exit
+
+enable password cisco
+service password-encryption  
+do write
+--------------------------------------------------
+
+
+
+
+
+enable 
+config t
+interface  gig1/0/3
+switchport mode access
+switchport access vlan 90
+switchport port-security maximum 2   
+switchport port-security mac-address sticky
+switchport port-security violation shutdown
+exit
+
+interface  gig1/0/2
+switchport mode access
+switchport access vlan 100
+switchport port-security maximum 2   
+switchport port-security mac-address sticky
+switchport port-security violation shutdown
+exit
+
+interface  gig1/0/1
+switchport mode trunk
+exit
+
+do write
+
+hostname L3Branch-SW
+banner motd #
+___________________________________________
+
+           Layer 3 Branch Switch
+___________________________________________#
+
+line console 0
+password cisco
+login
+exit
+
+enable password cisco
+service password-encryption  
+do write
+----------------------------------------------
+_______
+ROUTER
+_______
+
+enable
+config t
+interface se0/3/0
+no shutdown
+exit
+
+interface gig0/0
+no shutdown
+exit
+
+interface se0/3/0
+ip address 10.10.10.2 255.255.255.252
+exit
+
+
+interface gig0/0.90
+encapsulation dot1Q 90
+ip address 192.168.9.1 255.255.255.0
+exit
+
+interface gig0/0.100
+encapsulation dot1Q 100
+ip address 192.168.10.1 255.255.255.0
+do write
+
+service dhcp
+ip dhcp pool staff-pool
+network 192.168.9.0 255.255.255.0
+default-router 192.168.9.1 
+dns-server 192.168.9.1
+exit
+do write
+
+service dhcp
+ip dhcp pool StudLab-pool
+network 192.168.10.0 255.255.255.0
+default-router 192.168.10.1 
+dns-server 192.168.10.1
+exit
+do write
+
+router rip
+version 2
+network 192.168.9.0
+network 192.168.10.0
+network 10.10.10.0
+exit
+do write
+ 
+hostname B-R
+banner motd #
+______________________________________________
+
+          Branch Campus Router
+______________________________________________#
+
+line console 0
+password cisco
+login
+exit
+
+enable password cisco
+service password-encryption
+do write
+---------------------------------------------
+____________
+MAIN  ROUTER 
+____________
+
+enable
+config t
+no ip domain lookup
+interface gig0/0
+no shutdown
+exit
+ 
+interface se0/3/0
+no shutdown
+exit
+
+interface se0/3/1
+no shutdown
+exit
+
+interface se0/3/0
+clock rate 64000
+
+interface se0/3/1
+clock rate 64000
+
+interface se0/3/1
+ip address 10.10.10.1 255.255.255.252
+exit
+
+interface se0/3/0
+ip address 10.10.10.5 255.255.255.252
+exit
+
+
+interface gig0/0.10
+encapsulation dot1Q 10
+ip address 192.168.1.1 255.255.255.0
+exit
+
+interface gig0/0.20
+encapsulation dot1Q 20
+ip address 192.168.2.1 255.255.255.0
+exit
+
+interface gig0/0.30
+encapsulation dot1Q 30
+ip address 192.168.3.1 255.255.255.0
+exit
+
+interface gig0/0.40
+encapsulation dot1Q 40
+ip address 192.168.4.1 255.255.255.0
+exit
+
+interface gig0/0.50
+encapsulation dot1Q 50
+ip address 192.168.5.1 255.255.255.0
+exit
+
+interface gig0/0.60
+encapsulation dot1Q 60
+ip address 192.168.6.1 255.255.255.0
+exit
+
+interface gig0/0.70
+encapsulation dot1Q 70
+ip address 192.168.7.1 255.255.255.0
+exit
+
+interface gig0/0.80
+encapsulation dot1Q 80
+ip address 192.168.8.1 255.255.255.0
+exit
+
+do write
+
+service dhcp
+ip dhcp pool admin-pool
+network 192.168.1.0 255.255.255.0
+default-router 192.168.1.1 
+dns-server 192.168.8.2
+exit
+
+service dhcp
+ip dhcp pool HR-pool
+network 192.168.2.0 255.255.255.0
+default-router 192.168.2.1 
+dns-server 192.168.8.2
+exit
+
+service dhcp
+ip dhcp pool Fin-pool
+network 192.168.3.0 255.255.255.0
+default-router 192.168.3.1 
+dns-server 192.168.8.2
+exit
+
+service dhcp
+ip dhcp pool Busi-pool
+network 192.168.4.0 255.255.255.0
+default-router 192.168.4.1 
+dns-server 192.168.8.2
+exit
+
+service dhcp
+ip dhcp pool EC-pool
+network 192.168.5.0 255.255.255.0
+default-router 192.168.5.1 
+dns-server 192.168.8.2
+exit
+
+service dhcp
+ip dhcp pool AD-pool
+network 192.168.6.0 255.255.255.0
+default-router 192.168.6.1 
+dns-server 192.168.8.2
+exit
+
+service dhcp
+ip dhcp pool StudLab-pool
+network 192.168.7.0 255.255.255.0
+default-router 192.168.7.1 
+dns-server 192.168.8.2
+exit
+
+service dhcp
+ip dhcp pool IT-pool
+network 192.168.8.0 255.255.255.0
+default-router 192.168.8.1 
+dns-server 192.168.8.2
+exit
+
+router rip
+version 2
+network 10.10.10.0
+network 10.10.10.4
+network 192.168.1.0
+network 192.168.2.0
+network 192.168.3.0
+network 192.168.4.0
+network 192.168.5.0
+network 192.168.6.0
+network 192.168.7.0
+network 192.168.8.0
+do write
+exit
+
+hostname M-R
+banner motd #
+______________________________________________
+
+            Main Campus Router
+______________________________________________#
+
+line console 0
+password cisco
+login
+exit
+
+enable password cisco
+service password-encryption
+do write
+------------------------------------------------
+___________
+CLOUD
+___________
+
+enable 
+config t
+interface se0/3/0
+ip address 10.10.10.6 255.255.255.252
+exit
+
+interface gig0/0
+ip address 20.0.0.1 255.255.255.252
+exit
+do write
+
+router rip
+version 2
+network 20.0.0.0
+network 10.10.10.4
+exit
+do write
+
+hostname C-R
+banner motd #
+______________________________________________
+
+            Cloud Router
+______________________________________________#
+
+line console 0
+password cisco
+login
+exit
+
+enable password cisco
+service password-encryption
+do write
+
+
+
+
+--------------------------------------------
+servers configuration
+
+email server:
+open the server and click the service tab
+there choose email
+
+make sure SMTP and POP3 are on
+there give the domain: campus.com
+
+and give every pc that needs email a user name and password.
+
+in each PC:
+open desktop and click the email tab
+there fill the name as anything
+
+the email address should be username@domainname(admin@campus.com)
+
+in the server info: as both incoming and outgoing mail server put the ip address of the email server(20.0.0.2)
+
+the username and password should be the same as the one filled in the email server.
+
+
+-----------------------------------------------
+
+ftp server:
+click the ftp server and open the ftp tab
+give a user and a password for the ftp server
+
+give all the permission(write, read, delete, rename, list) to the server and add it
+
+and on the pc go the desktop tab and open the text editor and save it(ctrl + s) ftp.txt then exit.
+
+open command prompt and enter in the command:
+dir: to see is if the file was saved properly
+
+ftp <ip address of the server>: to access the server
+the server will prompt for a username and after that a password
+
+put ftp.txt: adding this file to the server
+dir: check the if the file has been added correctly
+
+
+open another pc and access the ftp using the username and password.
+dir: look for the file added by the previous pc
+get ftp.txt: to download it on the local pc from the server
+
+ctrl+c: to exit ftp
+dir: to check the localhost for the file that was downloaded
+
+
+------------------------------------------------------
+
+dns server:
+click the dns server and open the dns tab
+name: cisco.com(or any other domain name)
+address: 192.168.8.4(the address of the web server)
+add
+
+what this will do is instead of going to a web browser and write the ip address(which can be tedious), only write the domain name and the website can be accessed
+
+-------------------------------------------------------
+
+firewall on every server
+
+Block Ping Requests: Rule 1 (Deny, ICMP, 0.0.0.0, 255.255.255.255) blocks all ICMP traffic (like ping or traceroute commands) from every device on the network. If you try to ping the server from any PC, you will get a "Request Timed Out" message.
+
+Allow All Other Traffic: Rule 2 (Allow, IP, 0.0.0.0, 255.255.255.255) acts as a catch-all that allows all standard IP-based data traffic (like your HTTP Web browsing, DNS lookups, and SMTP/POP3 Emails) to pass through normally.
